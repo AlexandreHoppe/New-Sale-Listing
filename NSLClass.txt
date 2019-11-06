@@ -1,0 +1,12 @@
+public class NSLClass {
+    
+    public static void insertVal(){ 
+        string valueToString;
+        List<Opportunity> OppList = [SELECT Id, Name FROM Opportunity];
+        FOR (Opportunity valueToInput : OppList){
+            valueToString = String.valueOf(valueToInput.Id);
+            New_sale_Listing__c NSLInsert = new New_sale_Listing__c(Appointment__c = valueToString);
+            insert NSLInsert;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@isTest
+private class NSLTest{
+    static testMethod void insertVal(){
+    	test.StartTest();
+
+        Opportunity saleList = new Opportunity(
+            Name = 'test', 
+            StageName = 'testStage', 
+            CloseDate = date.newInstance(2019, 30, 07)
+        );
+        
+        insert saleList;
+        
+		NSLClass.insertVal();		        
+        Test.stopTest();
+            
+    }
+}
